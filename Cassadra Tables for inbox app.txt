@@ -1,0 +1,23 @@
+folders_by_users
+userId	text	K
+label	text	C asc
+color	Text
+
+unread_email_stats
+userId, label
+unread_count Counter
+
+messages_by_user_folder
+userId	text		K
+label	text		K
+id	    timeUUId	C dec
+to	    text
+subject	text
+isRead	bool
+
+messages
+id	    timeUUId	K
+from    text
+to	    List<text>
+Subject
+body

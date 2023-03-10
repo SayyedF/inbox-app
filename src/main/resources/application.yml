@@ -1,0 +1,36 @@
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: main
+      username: username
+      password: password
+      schema-action: recreate_drop_unused
+      request:
+        timeout: 20s
+      connection:
+        connect-timeout: 20s
+        init-query-timeout: 20s
+  application:
+    name: zinbox
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            client-id: your-id
+            client-secret: your-secret
+          google:
+            client-id: your-id.apps.googleusercontent.com
+            client-secret: your-secret
+
+datastax.astra:
+  secure-connect-bundle: connect.zip
+
+astra:
+  db:
+    id: id
+    region: europe-west1
+    keyspace: main
+    application:
+      token: AstraCS:token
